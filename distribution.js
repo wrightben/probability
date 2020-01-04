@@ -9,7 +9,7 @@ var distribution = function( p,t ) {
 		_r = _p.slice();
 
 	for (i = 0; i < t; i++) {
-		_p[ Math.floor( Math.random() * _p.length ) ] += 1;
+		_p[ Math.floor( Math.random() * p ) ] += 1;
 	}
 
 
