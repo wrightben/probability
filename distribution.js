@@ -14,7 +14,7 @@ var distribution = function( p,t ) {
 
 
 	_p.forEach(function(e,i) {
-		_r[i] = (Math.floor( (100*e/t)*100 )/100)+"%";
+		_r[i] = ( Math.floor( (100*e/t)*100 ) /100 )+"%";
 	});
 
 	console.log( "P: "+p+" T: "+t+"\n"+_r.join(" "));
