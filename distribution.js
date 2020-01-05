@@ -27,5 +27,5 @@ distribution( 3, 5 );
 // Metaphor: Coin toss; 100 trials
 distribution( 2, 100 );
 
-// Actual: Math.random() (0-3) distribution over 100 trials
+// Actual: Math.random() [0-3] distribution over 100 trials
 distribution( 4, 100 );
