@@ -35,5 +35,5 @@ var	_ = [],
 	// Output goes here!
 
 
-console.log( _.join(",") );
+console.log( _.sort().join(",") );
 ```

@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 
 $s = @ARGV[0];
+$if = @ARGV[1]; if (not defined $if) { $if = 0; } # Sequential Permutations: ($if=0=) 111 || ($if=1=) 123
 
 @_o = ();
 @_c = ();
@@ -20,7 +21,8 @@ for ($i = 0; $i < $s; $i ++ ) {
 			push @_exc, '(i'.($i+1).' != i'.($ii).')';
 		}
 		
-		push @_o,'if ('. join( ' && ', @_exc) .') {';
+		# Open Block: sequential permutations (1-2-3, instead of 1-1-1)
+		push @_o,'if ('. join( ' && ', @_exc) .') {' if $if != 0;
 		
 		# Concatenation of i-vars in JS
 		if ($i == $s - 1 ) {
@@ -32,8 +34,8 @@ for ($i = 0; $i < $s; $i ++ ) {
 			push @_o, "\n\n". '_.push( [ '.(join ",", @_con).' ].join("") );'."\n\n";
 		}		
 					
-		
-		push @_c, "}";
+		# Close Block: sequential permutations
+		push @_c, "}" if $if != 0;
 	
 	}
 	
