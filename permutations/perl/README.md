@@ -5,13 +5,10 @@
 perl i.pl 3 1
 ```
 
-**n (nPr)**
-* n = r (default)
-* set n in JS file
+**n(P)r**
+* if n is set in JS file, r must be <= n
+* else n = r
 
-**r (nPr)**
-* number of for-loops
-* if n is set, r <= n
 
 #### Output
 ```
