@@ -1,6 +1,8 @@
 ### Use
 ```
-perl i.pl 3 # r = 3
+# ARGV[0] = 3 = r (number of loops)
+# ARGV[1] = [0,1] (optionally include if-exclusions: 1-2-3 instead of 1-1-1)
+perl i.pl 3 1
 ```
 
 **n (nPr)**
