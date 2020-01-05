@@ -1,13 +1,13 @@
 ### Use
 ```
-# ARGV[0] = 3 = r (number of loops)
-# ARGV[1] = [0,1] (optionally include if-exclusions: 1-2-3 instead of 1-1-1)
 perl i.pl 3 1
 ```
 
 **n(P)r**
+* r = ARGV[0] (Number of for-loops)
 * if n is set in JS file, r must be <= n
 * else n = r
+* ARGV[1] (optional) = 0 or 1; 1 prevents duplicate digits (123 instead of 111)
 
 
 #### Output
