@@ -31,7 +31,7 @@ for ($i = 0; $i < $s; $i ++ ) {
 # 				push @_con, ('i'.($iii+1).' + 1');
 				push @_con, ('i'.($iii+1));
 			}
-			push @_o, "\n\n". '_.push( [ '.(join ",", @_con).' ].join("") );'."\n\n";
+			push @_o, "\n\n". '_.push( [ '.(join ",", reverse @_con).' ].join(":") );'."\n\n";
 		}		
 					
 		# Close Block: sequential permutations
